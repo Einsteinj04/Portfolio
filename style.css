@@ -1,0 +1,436 @@
+/* ================
+     SETUP
+  ================= */
+/*
+font-family: 'Josefin Sans', sans-serif; 
+font-family: 'Pacifico', cursive;
+ */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root {
+  --clr-pink: #ff5964;
+  --clr-bright-blue: #35a7ff;
+  --clr-white: #f5e9e2;
+  --clr-dark: #0b0014;
+  --clr-dark-blue: #00635d;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: grid;
+}
+
+/* =================
+     WELCOME SECTION
+  ================== */
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#welcome-section::before {
+  content: "";
+  background: url(https://thesavvycouple.com/wp-content/uploads/2018/10/Night-Jobs-Work-From-Home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+/* Nav Bar */
+#navbar {
+  width: 100%;
+  padding: 1.4rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background: rgb(92, 90, 90);
+  z-index: 999;
+}
+ul {
+  display: flex;
+  align-items: end;
+  width: 50%;
+  justify-content: space-around;
+  list-style: none;
+}
+ul > li :hover {
+  border-bottom: 3px solid white;
+  transition: all 300ms ease-out;
+}
+.logo-name {
+  color: var(--clr-bright-blue);
+  font-size: 5rem;
+  font-family: "Pacifico", cursive;
+}
+.welcome-texts {
+  color: var(--clr-white);
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+.personality {
+  font-size: 5rem;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+}
+.connect-link {
+  text-decoration: none;
+  color: var(--clr-dark);
+  display: block;
+  background: linear-gradient(90deg, red, white);
+  font-size: 4rem;
+  border-radius: 10%;
+  padding: 2rem;
+  width: fit-content;
+  margin: 10% auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
+}
+.connect-link:hover {
+  transform: scale(1.1);
+  transition: 500ms ease-out;
+}
+.heading-text {
+  font-size: 10rem;
+  font-family: "Open Sans", sans-serif;
+}
+span {
+  background: repeating-linear-gradient(to right, yellow, var(--clr-pink));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+ul a {
+  color: var(--clr-white);
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+/* ==============
+ABOUT ME
+================= */
+#About {
+  background: url(https://cdn.wallpapersafari.com/25/91/04JcH2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 3rem;
+  padding: 1.5rem 1.5rem 10rem 1.5rem;
+}
+h2 {
+  color: var(--clr-pink);
+  text-align: center;
+  font-size: 4rem;
+  grid-column: 1/-1;
+  padding: 1em;
+  font-family: "Pacifico", cursive;
+  text-decoration: underline;
+}
+#About p {
+  color: var(--clr-white);
+  font-size: 2em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: justify;
+  padding: 1.5em;
+}
+strong {
+  color: yellow;
+}
+.myself {
+  border-radius: 50%;
+}
+
+/* ==============
+PROJECTS
+================= */
+#Projects {
+  background: linear-gradient(
+    to bottom right,
+    var(--clr-dark-blue),
+    var(--clr-bright-blue)
+  );
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+.project-title {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 5rem;
+  gap: 5rem;
+}
+.project-container {
+  text-decoration: none;
+  border-radius: 25px;
+  background-color: var(--clr-pink);
+}
+.project-image {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.project-container p {
+  background-color: var(--clr-pink);
+  font-size: 3rem;
+  color: var(--clr-white);
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 2.5rem;
+}
+.project-container:focus,
+.project-container:hover {
+  transform: scale(1.04);
+  transition: 500ms ease-out;
+}
+/* ============
+CONTACTS SECTION
+=============== */
+#Contacts {
+  background-color: gray;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-text {
+  color: var(--clr-white);
+  text-align: center;
+}
+.collaboration-text {
+  font-size: 7rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.reach-me-text {
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
+}
+.contact-links-container {
+  display: flex;
+  width: 100%;
+  padding: 5rem;
+  justify-content: space-around;
+}
+.contact-links {
+  color: var(--clr-white);
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.contact-links:hover {
+  transition: 200ms ease-out;
+  transform: translateY(5px);
+}
+.fa-brands {
+  font-size: 5rem;
+}
+.more-text {
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--clr-dark);
+  font-weight: 900;
+}
+@media (max-width: 850px) {
+  .logo-name {
+    font-size: 3.8rem;
+  }
+  ul a {
+    font-size: 2rem;
+  }
+
+  .heading-text {
+    font-size: 7rem;
+  }
+
+  .personality {
+    font-size: 2.5rem;
+  }
+  .connect-link {
+    font-size: 2rem;
+  }
+  #About p {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  .project-container p {
+    font-size: 2rem;
+  }
+  .project-title {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 4rem;
+    gap: 4rem;
+  }
+  .collaboration-text {
+    font-size: 5rem;
+  }
+  .reach-me-text {
+    font-size: 1.5rem;
+  }
+  .contact-links {
+    font-size: 2.3rem;
+  }
+  .fa-brands {
+    font-size: 4rem;
+  }
+  .more-text {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 600px) {
+  .logo-name {
+    font-size: 2.8rem;
+  }
+  ul a {
+    font-size: 1.4rem;
+  }
+  .heading-text {
+    font-size: 5rem;
+  }
+  .personality {
+    font-size: 2rem;
+  }
+  .connect-link {
+    font-size: 1.8rem;
+  }
+  .myself {
+    width: 150px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #About p {
+    font-size: 1em;
+  }
+  .project-container p {
+    font-size: 1.5rem;
+  }
+  .project-image {
+    height: 30rem;
+  }
+  .project-title {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 3rem;
+    gap: 3rem;
+  }
+  .project-title {
+    padding: 4rem;
+  }
+  .collaboration-text {
+    font-size: 4.6rem;
+  }
+  .reach-me-text {
+    font-size: 1.2rem;
+  }
+  .contact-links {
+    font-size: 1.8rem;
+  }
+  .fa-brands {
+    font-size: 3.6rem;
+  }
+  .more-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .logo-name {
+    font-size: 2.4rem;
+  }
+  ul a {
+    font-size: 1.1rem;
+  }
+  .heading-text {
+    font-size: 3rem;
+  }
+  .personality {
+    font-size: 1.6rem;
+  }
+  .welcome-texts {
+    top: 45%;
+    left: 12%;
+  }
+  .connect-link {
+    font-size: 1.4rem;
+  }
+  .myself {
+    width: 100px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  #About p {
+    font-size: 0.9em;
+  }
+  .project-container p {
+    font-size: 1.3rem;
+  }
+  .project-image {
+    height: 20rem;
+  }
+  .project-title {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .project-title {
+    padding: 3rem;
+  }
+  .collaboration-text {
+    font-size: 4.1rem;
+  }
+  .reach-me-text {
+    font-size: 1rem;
+  }
+  .contact-links {
+    font-size: 1.4rem;
+  }
+  .fa-brands {
+    font-size: 3.1rem;
+  }
+  .more-text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+@media (max-width: 350px) {
+  .logo-name {
+    font-size: 2.1rem;
+  }
+  ul a {
+    font-size: 1rem;
+  }
+  .connect-link {
+    font-size: 1.1rem;
+  }
+  .welcome-texts {
+    top: 45%;
+    left: 10%;
+  }
+  #About p {
+    font-size: 0.8em;
+  }
+  .project-title {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
